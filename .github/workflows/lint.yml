@@ -12,8 +12,9 @@ jobs:
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
+        pip install pylint
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
     - name: Lint grader
-      uses: cclauss/GitHub-Action-for-pylint@0.7.0
+      uses: pylint grader
     - name: Lint solutions
-      uses: cclauss/GitHub-Action-for-pylint@0.7.0
+      uses: pylint solutions
