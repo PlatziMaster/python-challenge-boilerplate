@@ -8,7 +8,7 @@ import os
 import sys
 import pathlib
 
-from grader import Grader
+from grader import Grader # pylint: disable=E0611
 
 
 SOLUTIONS_DIR = 'solutions'
