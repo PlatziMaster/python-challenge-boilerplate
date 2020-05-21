@@ -1,6 +1,6 @@
 """Problem grader."""
 
-from base import BaseGrader
+from base import BaseGrader # pylint: disable=E0611
 
 
 class Grader(BaseGrader):

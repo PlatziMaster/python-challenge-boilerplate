@@ -1,7 +1,7 @@
 """Base module contains the abstract classes that control the grader execution."""
 
 import sys
-from typing import Any, Callable, List, Tuple
+from typing import Any, List, Tuple
 
 IOPair = Tuple[Any, Any]
 
@@ -63,7 +63,7 @@ class BaseGrader:
         except AttributeError:
             self.logger.error("Cannot find function %s in solution", self.evaluation_function_name)
             sys.exit(1)
-  
+
     def get_test_cases(self) -> List[IOPair]:
         """Generate the test cases used against each solution."""
         raise NotImplementedError
@@ -94,7 +94,7 @@ class BaseGrader:
             else:
                 reps.append(str(value))
 
-        execution_string = "{}\n\tinput: {}\n\toutput: {}\n\texpected: {}".format(
+        execution_string = "{}\n\tinput:\t\t{}\n\toutput: \t{}\n\texpected:\t{}".format(
             self.__get_solution_full_name(self.f),
             *reps
         )
