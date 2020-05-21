@@ -53,6 +53,7 @@ class BaseGrader:
 
         if self.failed:
             self.logger.error("Grader finished with %d errors", self.errors)
+            sys.exit(1)
 
     def setup(self, solution):
         """Creates a new solution instance."""
